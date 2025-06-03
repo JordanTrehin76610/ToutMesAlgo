@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Algo>
-    <description texte="" courant="AFFICHER &quot;Saisisser deux nombres non nul (pas de 0)&quot;"/>
+    <description texte="" courant="nbr2 EST_DU_TYPE NOMBRE"/>
     <extension extnom="inactif"/>
     <fonction fctcode="" fctetat="inactif"/>
     <F2 F2etat="inactif" F2lignes="" F2para="" F2defaut=""/>
@@ -15,6 +15,7 @@
         <item algoitem="AFFICHER &quot;Saisisser deux nombres non nul (pas de 0)&quot;" code="4#Saisisser deux nombres non nul (pas de 0)#0"/>
         <item algoitem="LIRE nbr1" code="2#nbr1#pasliste"/>
         <item algoitem="LIRE nbr2" code="2#nbr2#pasliste"/>
+        <item algoitem="//Je met un commentaire pour tester" code="19#Je met un commentaire pour tester"/>
         <item algoitem="SI ((nbr1 == 0) OU (nbr2 == 0)) ALORS" code="6#(nbr1 == 0) OU (nbr2 == 0)">
             <item algoitem="DEBUT_SI" code="7#debutsi"/>
             <item algoitem="AFFICHER &quot;T'as mis un 0, j'arrete !&quot;" code="4#T'as mis un 0, j'arrete !#0"/>
