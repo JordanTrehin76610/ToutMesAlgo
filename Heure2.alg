@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Algo>
-    <description texte="" courant="SI (heure&lt;0 OU minute&lt;0 OU seconde&lt;0 OU minute>60 OU seconde>60 OU heure>24) ALORS"/>
+    <description texte="" courant="AFFICHER &quot;Et je te donnerai l'heure à la seconde d'après&quot;"/>
     <extension extnom="inactif"/>
-    <fonction fctcode="" fctetat="inactif"/>
-    <F2 F2lignes="" F2defaut="" F2etat="inactif" F2para=""/>
-    <repere repetat="inactif" repcode="-10#10#-10#10#2#2"/>
-    <param arrondiAuto="vrai" maxBoucle="600000" epaisseurPoint="2" nbDecimales="8" epaisseurLigne="2" totalBoucles="5000000" totalAffichages="1000"/>
+    <fonction fctetat="inactif" fctcode=""/>
+    <F2 F2para="" F2defaut="" F2etat="inactif" F2lignes=""/>
+    <repere repcode="-10#10#-10#10#2#2" repetat="inactif"/>
+    <param epaisseurPoint="2" totalBoucles="5000000" nbDecimales="8" epaisseurLigne="2" totalAffichages="1000" arrondiAuto="vrai" maxBoucle="600000"/>
     <item code="200#declarationfonctions" algoitem="FONCTIONS_UTILISEES"/>
     <item code="100#declarationsvariables" algoitem="VARIABLES">
         <item code="1#NOMBRE#heure" algoitem="heure EST_DU_TYPE NOMBRE"/>
@@ -15,7 +15,7 @@
     <item code="101#debutalgo" algoitem="DEBUT_ALGORITHME">
         <item code="4#Je veux savoir quel heure il est.#1" algoitem="AFFICHER &quot;Je veux savoir quel heure il est.&quot;"/>
         <item code="4#Tu me donnera l'heure puis les minutes puis les secondes#1" algoitem="AFFICHER &quot;Tu me donnera l'heure puis les minutes puis les secondes&quot;"/>
-        <item code="4#Et je te donnerai l'heure à la minute d'après#0" algoitem="AFFICHER &quot;Et je te donnerai l'heure à la minute d'après&quot;"/>
+        <item code="4#Et je te donnerai l'heure à la seconde d'après#0" algoitem="AFFICHER &quot;Et je te donnerai l'heure à la seconde d'après&quot;"/>
         <item code="2#heure#pasliste" algoitem="LIRE heure"/>
         <item code="2#minute#pasliste" algoitem="LIRE minute"/>
         <item code="2#seconde#pasliste" algoitem="LIRE seconde"/>

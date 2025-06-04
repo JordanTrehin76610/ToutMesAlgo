@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Algo>
-    <description texte="" courant="AFFICHER &quot; photocopie.&quot;"/>
+    <description courant="AFFICHER &quot;0.10 euros les 10 premiers, 0.09 euros les vingt suivante et 0.08 les restantes&quot;" texte=""/>
     <extension extnom="inactif"/>
-    <fonction fctcode="" fctetat="inactif"/>
-    <F2 F2etat="inactif" F2defaut="" F2para="" F2lignes=""/>
+    <fonction fctetat="inactif" fctcode=""/>
+    <F2 F2etat="inactif" F2lignes="" F2defaut="" F2para=""/>
     <repere repetat="inactif" repcode="-10#10#-10#10#2#2"/>
-    <param epaisseurLigne="2" arrondiAuto="vrai" totalBoucles="5000000" totalAffichages="1000" epaisseurPoint="2" maxBoucle="600000" nbDecimales="8"/>
+    <param maxBoucle="600000" totalBoucles="5000000" epaisseurPoint="2" epaisseurLigne="2" arrondiAuto="vrai" totalAffichages="1000" nbDecimales="8"/>
     <item code="200#declarationfonctions" algoitem="FONCTIONS_UTILISEES"/>
     <item code="100#declarationsvariables" algoitem="VARIABLES">
         <item code="1#NOMBRE#photocopie" algoitem="photocopie EST_DU_TYPE NOMBRE"/>
@@ -16,7 +16,7 @@
     <item code="101#debutalgo" algoitem="DEBUT_ALGORITHME">
         <item code="5#total#0#pasliste" algoitem="total PREND_LA_VALEUR 0"/>
         <item code="4#Magasing de photocoping, donnez nous le nombre de photocoping que vous voulez faire#1" algoitem="AFFICHER &quot;Magasing de photocoping, donnez nous le nombre de photocoping que vous voulez faire&quot;"/>
-        <item code="4#0.10 euros, les 10 premiers, 0.09 euros les vingt suivante et 0.08 les restantes#0" algoitem="AFFICHER &quot;0.10 euros, les 10 premiers, 0.09 euros les vingt suivante et 0.08 les restantes&quot;"/>
+        <item code="4#0.10 euros les 10 premiers, 0.09 euros les vingt suivante et 0.08 les restantes#0" algoitem="AFFICHER &quot;0.10 euros les 10 premiers, 0.09 euros les vingt suivante et 0.08 les restantes&quot;"/>
         <item code="2#photocopie#pasliste" algoitem="LIRE photocopie"/>
         <item code="5#reste#photocopie#pasliste" algoitem="reste PREND_LA_VALEUR photocopie"/>
         <item code="6#photocopie&lt;0" algoitem="SI (photocopie&lt;0) ALORS">

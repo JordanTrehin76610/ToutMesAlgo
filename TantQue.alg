@@ -2,17 +2,17 @@
 <Algo>
     <description texte="" courant="AFFICHER &quot;Juste lit les instructions et exécute toi&quot;"/>
     <extension extnom="inactif"/>
-    <fonction fctcode="" fctetat="inactif"/>
-    <F2 F2lignes="" F2defaut="" F2etat="inactif" F2para=""/>
+    <fonction fctetat="inactif" fctcode=""/>
+    <F2 F2lignes="" F2etat="inactif" F2para="" F2defaut=""/>
     <repere repetat="inactif" repcode="-10#10#-10#10#2#2"/>
-    <param arrondiAuto="vrai" maxBoucle="600000" epaisseurPoint="2" nbDecimales="8" epaisseurLigne="2" totalBoucles="5000000" totalAffichages="1000"/>
+    <param epaisseurPoint="2" arrondiAuto="vrai" maxBoucle="600000" totalBoucles="5000000" totalAffichages="1000" nbDecimales="8" epaisseurLigne="2"/>
     <item code="200#declarationfonctions" algoitem="FONCTIONS_UTILISEES"/>
     <item code="100#declarationsvariables" algoitem="VARIABLES">
         <item code="1#NOMBRE#note" algoitem="note EST_DU_TYPE NOMBRE"/>
     </item>
     <item code="101#debutalgo" algoitem="DEBUT_ALGORITHME">
         <item code="5#note#0#pasliste" algoitem="note PREND_LA_VALEUR 0"/>
-        <item code="4#Juste lit les instructions et exécute toi#0" algoitem="AFFICHER &quot;Juste lit les instructions et exécute toi&quot;"/>
+        <item code="4#Juste lit les instructions et exécute toi#1" algoitem="AFFICHER &quot;Juste lit les instructions et exécute toi&quot;"/>
         <item code="15#note&lt;1 OU note>5" algoitem="TANT_QUE (note&lt;1 OU note>5) FAIRE">
             <item code="16#debuttantque" algoitem="DEBUT_TANT_QUE"/>
             <item code="4#Saisissez une note entre 1 et 5#0" algoitem="AFFICHER &quot;Saisissez une note entre 1 et 5&quot;"/>
