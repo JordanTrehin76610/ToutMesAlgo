@@ -1083,29 +1083,59 @@ if (!entier_temp) {throw("erreur_input");}
 if (ALGOBOX_CALCULER_EXPRESSION(entier_temp)=="Erreur") {throw("erreur_calcul");}
 entier=ALGOBOX_CALCULER_EXPRESSION(entier_temp);
 
-ALGOBOX_SECURITE_BOUCLE1=0;
 ALGOBOX_LIGNE_COURANTE=11;
 if (ALGOBOX_EMERGENCY_STOP) {throw("erreur_emergency");}
-for (incrementation=1;incrementation<=entier;incrementation++)
+if (entier<1 || entier>10)
 {
-ALGOBOX_SECURITE_BOUCLE1++;
-ALGOBOX_COMPTEUR_BOUCLE_GLOBAL++;
 ALGOBOX_LIGNE_COURANTE=12;
 if (ALGOBOX_EMERGENCY_STOP) {throw("erreur_emergency");}
 
 ALGOBOX_LIGNE_COURANTE=13;
 if (ALGOBOX_EMERGENCY_STOP) {throw("erreur_emergency");}
-if (ALGOBOX_ARRONDI(incrementation*entier)=="Erreur") {throw("erreur_calcul");}
-algobox_temp_affichcalcul=ALGOBOX_ARRONDI(incrementation*entier);
-ALGOBOX_AJOUTE_OUTPUT(ALGOBOX_FORMAT_TEXTE(algobox_temp_affichcalcul),false);
+ALGOBOX_AJOUTE_OUTPUT("Pas bien, refait",false);
 ALGOBOX_LIGNE_COURANTE=14;
 if (ALGOBOX_EMERGENCY_STOP) {throw("erreur_emergency");}
-ALGOBOX_AJOUTE_OUTPUT(", ",false);
-ALGOBOX_LIGNE_COURANTE=15;
+}
+else
+{
+ALGOBOX_LIGNE_COURANTE=16;
+if (ALGOBOX_EMERGENCY_STOP) {throw("erreur_emergency");}
+
+ALGOBOX_SECURITE_BOUCLE3=0;
+ALGOBOX_LIGNE_COURANTE=17;
+if (ALGOBOX_EMERGENCY_STOP) {throw("erreur_emergency");}
+for (incrementation=1;incrementation<=entier;incrementation++)
+{
+ALGOBOX_SECURITE_BOUCLE3++;
+ALGOBOX_COMPTEUR_BOUCLE_GLOBAL++;
+ALGOBOX_LIGNE_COURANTE=18;
+if (ALGOBOX_EMERGENCY_STOP) {throw("erreur_emergency");}
+
+ALGOBOX_LIGNE_COURANTE=19;
+if (ALGOBOX_EMERGENCY_STOP) {throw("erreur_emergency");}
+ALGOBOX_AJOUTE_OUTPUT(ALGOBOX_FORMAT_TEXTE(incrementation),false);
+ALGOBOX_LIGNE_COURANTE=20;
+if (ALGOBOX_EMERGENCY_STOP) {throw("erreur_emergency");}
+ALGOBOX_AJOUTE_OUTPUT(" x ",false);
+ALGOBOX_LIGNE_COURANTE=21;
+if (ALGOBOX_EMERGENCY_STOP) {throw("erreur_emergency");}
+ALGOBOX_AJOUTE_OUTPUT(ALGOBOX_FORMAT_TEXTE(entier),false);
+ALGOBOX_LIGNE_COURANTE=22;
+if (ALGOBOX_EMERGENCY_STOP) {throw("erreur_emergency");}
+ALGOBOX_AJOUTE_OUTPUT(" = ",false);
+ALGOBOX_LIGNE_COURANTE=23;
+if (ALGOBOX_EMERGENCY_STOP) {throw("erreur_emergency");}
+if (ALGOBOX_ARRONDI(incrementation*entier)=="Erreur") {throw("erreur_calcul");}
+algobox_temp_affichcalcul=ALGOBOX_ARRONDI(incrementation*entier);
+ALGOBOX_AJOUTE_OUTPUT(ALGOBOX_FORMAT_TEXTE(algobox_temp_affichcalcul),true);
+ALGOBOX_LIGNE_COURANTE=24;
 if (ALGOBOX_EMERGENCY_STOP) {throw("erreur_emergency");}
 if (ALGOBOX_DEPASSEMENT_AFFICHAGE) {throw("erreur_affiche"); break;}
-if (ALGOBOX_SECURITE_BOUCLE1>600000) {throw("erreur_boucle"); break;}
+if (ALGOBOX_SECURITE_BOUCLE3>600000) {throw("erreur_boucle"); break;}
 if (ALGOBOX_COMPTEUR_BOUCLE_GLOBAL>5000000) {throw("erreur_boucle"); break;}
+}
+ALGOBOX_LIGNE_COURANTE=25;
+if (ALGOBOX_EMERGENCY_STOP) {throw("erreur_emergency");}
 }
 ALGOBOX_AJOUTE_OUTPUT(" ",true);
 ALGOBOX_AJOUTE_OUTPUT("***Algorithme terminé***",false);
@@ -1204,12 +1234,22 @@ Cliquer sur ce bouton pour exécuter l'algorithme :&nbsp;<input type="button" na
 8&nbsp;&nbsp;&nbsp;&nbsp;<a name="8">&nbsp;</a><span id="ligne8" ><span style="color:#0000CC;">AFFICHER</span> "(Exemple les produit de 6 allant jusqu'à 6x6)"</span><br>
 9&nbsp;&nbsp;&nbsp;&nbsp;<a name="9">&nbsp;</a><span id="ligne9" ><span style="color:#0000CC;">AFFICHER</span> "Rentrer un nombre entier entre 1 et 10"</span><br>
 10&nbsp;&nbsp;&nbsp;<a name="10">&nbsp;</a><span id="ligne10" ><span style="color:#0000CC;">LIRE</span> entier</span><br>
-11&nbsp;&nbsp;&nbsp;<a name="11">&nbsp;</a><span id="ligne11" ><span style="color:#BB8800;font-weight:bold;">POUR</span> incrementation <span style="color:#BB8800;font-weight:bold;">ALLANT_DE</span> 1 A entier</span><br>
-12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="12">&nbsp;</a><span id="ligne12" ><span style="color:#BB8800;font-weight:bold;">DEBUT_POUR</span></span><br>
-13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="13">&nbsp;</a><span id="ligne13" ><span style="color:#0000CC;">AFFICHERCALCUL</span> incrementation*entier</span><br>
-14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="14">&nbsp;</a><span id="ligne14" ><span style="color:#0000CC;">AFFICHER</span> ", "</span><br>
-15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="15">&nbsp;</a><span id="ligne15" ><span style="color:#BB8800;font-weight:bold;">FIN_POUR</span></span><br>
-16&nbsp;<a name="16">&nbsp;</a><span id="ligne16" ><span style="color:#800000;font-weight:bold;">FIN_ALGORITHME</span></span><br>
+11&nbsp;&nbsp;&nbsp;<a name="11">&nbsp;</a><span id="ligne11" ><span style="color:#800080;font-weight:bold;">SI</span> (entier&lt;1 ou entier&gt;10) <span style="color:#800080;font-weight:bold;">ALORS</span></span><br>
+12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="12">&nbsp;</a><span id="ligne12" ><span style="color:#800080;font-weight:bold;">DEBUT_SI</span></span><br>
+13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="13">&nbsp;</a><span id="ligne13" ><span style="color:#0000CC;">AFFICHER</span> "Pas bien, refait"</span><br>
+14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="14">&nbsp;</a><span id="ligne14" ><span style="color:#800080;font-weight:bold;">FIN_SI</span></span><br>
+15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="15">&nbsp;</a><span id="ligne15" ><span style="color:#800080;font-weight:bold;">SINON</span></span><br>
+16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="16">&nbsp;</a><span id="ligne16" ><span style="color:#800080;font-weight:bold;">DEBUT_SINON</span></span><br>
+17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="17">&nbsp;</a><span id="ligne17" ><span style="color:#BB8800;font-weight:bold;">POUR</span> incrementation <span style="color:#BB8800;font-weight:bold;">ALLANT_DE</span> 1 A entier</span><br>
+18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="18">&nbsp;</a><span id="ligne18" ><span style="color:#BB8800;font-weight:bold;">DEBUT_POUR</span></span><br>
+19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="19">&nbsp;</a><span id="ligne19" ><span style="color:#0000CC;">AFFICHER</span> incrementation</span><br>
+20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="20">&nbsp;</a><span id="ligne20" ><span style="color:#0000CC;">AFFICHER</span> " x "</span><br>
+21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="21">&nbsp;</a><span id="ligne21" ><span style="color:#0000CC;">AFFICHER</span> entier</span><br>
+22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="22">&nbsp;</a><span id="ligne22" ><span style="color:#0000CC;">AFFICHER</span> " = "</span><br>
+23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="23">&nbsp;</a><span id="ligne23" ><span style="color:#0000CC;">AFFICHERCALCUL</span> incrementation*entier</span><br>
+24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="24">&nbsp;</a><span id="ligne24" ><span style="color:#BB8800;font-weight:bold;">FIN_POUR</span></span><br>
+25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="25">&nbsp;</a><span id="ligne25" ><span style="color:#800080;font-weight:bold;">FIN_SINON</span></span><br>
+26&nbsp;<a name="26">&nbsp;</a><span id="ligne26" ><span style="color:#800000;font-weight:bold;">FIN_ALGORITHME</span></span><br>
 
 </div>
 <br clear="all">
