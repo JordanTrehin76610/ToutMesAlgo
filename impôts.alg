@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Algo>
-    <description courant="SI ((age &lt;= 0) OU ((genre != &quot;Femme&quot;) ET (genre !=&quot;femme&quot;) ET (genre != &quot;FEMME&quot;) ET (genre != &quot;Homme&quot;) ET (genre != &quot;HOMME&quot;) ET (genre != &quot;homme&quot;))) ALORS" texte=""/>
+    <description texte="" courant="AFFICHER &quot;Mais à tes 18 ans, tu vas en payer !&quot;"/>
     <extension extnom="inactif"/>
-    <fonction fctetat="inactif" fctcode=""/>
-    <F2 F2defaut="" F2lignes="" F2para="" F2etat="inactif"/>
+    <fonction fctcode="" fctetat="inactif"/>
+    <F2 F2lignes="" F2defaut="" F2etat="inactif" F2para=""/>
     <repere repetat="inactif" repcode="-10#10#-10#10#2#2"/>
-    <param arrondiAuto="vrai" maxBoucle="600000" nbDecimales="8" epaisseurLigne="2" totalBoucles="5000000" epaisseurPoint="2" totalAffichages="1000"/>
+    <param arrondiAuto="vrai" maxBoucle="600000" epaisseurPoint="2" nbDecimales="8" epaisseurLigne="2" totalBoucles="5000000" totalAffichages="1000"/>
     <item code="200#declarationfonctions" algoitem="FONCTIONS_UTILISEES"/>
     <item code="100#declarationsvariables" algoitem="VARIABLES">
         <item code="1#NOMBRE#age" algoitem="age EST_DU_TYPE NOMBRE"/>
@@ -39,7 +39,8 @@
                         <item code="8#finsi" algoitem="FIN_SI"/>
                         <item code="9#sinon" algoitem="SINON">
                             <item code="10#debutsinon" algoitem="DEBUT_SINON"/>
-                            <item code="4#Tu échappe au impôts mais plus pour très longtemps#0" algoitem="AFFICHER &quot;Tu échappe au impôts mais plus pour très longtemps&quot;"/>
+                            <item code="4#Tu échappe au impôts mais plus pour très longtemps#1" algoitem="AFFICHER &quot;Tu échappe au impôts mais plus pour très longtemps&quot;"/>
+                            <item code="4#Car si tu as plus de 20 ans, c'est couic !#0" algoitem="AFFICHER &quot;Car si tu as plus de 20 ans, c'est couic !&quot;"/>
                             <item code="11#finsinon" algoitem="FIN_SINON"/>
                         </item>
                     </item>
@@ -53,7 +54,17 @@
                         <item code="8#finsi" algoitem="FIN_SI"/>
                         <item code="9#sinon" algoitem="SINON">
                             <item code="10#debutsinon" algoitem="DEBUT_SINON"/>
-                            <item code="4#Tu as échapper au impôts, bravo...#0" algoitem="AFFICHER &quot;Tu as échapper au impôts, bravo...&quot;"/>
+                            <item code="4#Tu échappe au impôts, bravo...#1" algoitem="AFFICHER &quot;Tu échappe au impôts, bravo...&quot;"/>
+                            <item code="6#age>35" algoitem="SI (age>35) ALORS">
+                                <item code="7#debutsi" algoitem="DEBUT_SI"/>
+                                <item code="4#MEME#0" algoitem="AFFICHER &quot;MEME&quot;"/>
+                                <item code="8#finsi" algoitem="FIN_SI"/>
+                            </item>
+                            <item code="6#age&lt;18" algoitem="SI (age&lt;18) ALORS">
+                                <item code="7#debutsi" algoitem="DEBUT_SI"/>
+                                <item code="4#Mais à tes 18 ans, tu vas en payer !#0" algoitem="AFFICHER &quot;Mais à tes 18 ans, tu vas en payer !&quot;"/>
+                                <item code="8#finsi" algoitem="FIN_SI"/>
+                            </item>
                             <item code="11#finsinon" algoitem="FIN_SINON"/>
                         </item>
                     </item>

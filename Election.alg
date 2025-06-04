@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Algo>
-    <description texte="" courant="DEBUT_SI"/>
+    <description texte="" courant="AFFICHER &quot;Il a - de 50% et n'est pas premier en %&quot;"/>
     <extension extnom="inactif"/>
     <fonction fctcode="" fctetat="inactif"/>
-    <F2 F2lignes="" F2para="" F2etat="inactif" F2defaut=""/>
+    <F2 F2lignes="" F2defaut="" F2etat="inactif" F2para=""/>
     <repere repetat="inactif" repcode="-10#10#-10#10#2#2"/>
-    <param epaisseurLigne="2" totalAffichages="1000" nbDecimales="8" epaisseurPoint="2" totalBoucles="5000000" arrondiAuto="vrai" maxBoucle="600000"/>
+    <param arrondiAuto="vrai" maxBoucle="600000" epaisseurPoint="2" nbDecimales="8" epaisseurLigne="2" totalBoucles="5000000" totalAffichages="1000"/>
     <item code="200#declarationfonctions" algoitem="FONCTIONS_UTILISEES"/>
     <item code="100#declarationsvariables" algoitem="VARIABLES">
         <item code="1#NOMBRE#A" algoitem="A EST_DU_TYPE NOMBRE"/>
@@ -18,7 +18,7 @@
         <item code="4#Vous allez devoir affecter le score de quatre candidats en pourcentage.#1" algoitem="AFFICHER &quot;Vous allez devoir affecter le score de quatre candidats en pourcentage.&quot;"/>
         <item code="4#Ceux ci sont en compétitions pour les élections#1" algoitem="AFFICHER &quot;Ceux ci sont en compétitions pour les élections&quot;"/>
         <item code="4#Nous vous diront le status du candidat A à la suite des scores donnée#1" algoitem="AFFICHER &quot;Nous vous diront le status du candidat A à la suite des scores donnée&quot;"/>
-        <item code="4#(Ils faut que le résultat des quatres candidats fasse moins de 100%)#1" algoitem="AFFICHER &quot;(Ils faut que le résultat des quatres candidats fasse moins de 100%)&quot;"/>
+        <item code="4#(Ils faut que le résultat des quatres candidats fasse 100% ou moins)#1" algoitem="AFFICHER &quot;(Ils faut que le résultat des quatres candidats fasse 100% ou moins)&quot;"/>
         <item code="2#A#pasliste" algoitem="LIRE A"/>
         <item code="2#B#pasliste" algoitem="LIRE B"/>
         <item code="2#C#pasliste" algoitem="LIRE C"/>
@@ -41,22 +41,26 @@
                 <item code="10#debutsinon" algoitem="DEBUT_SINON"/>
                 <item code="6#A>50" algoitem="SI (A>50) ALORS">
                     <item code="7#debutsi" algoitem="DEBUT_SI"/>
-                    <item code="4#Le candidat A à gagner !#0" algoitem="AFFICHER &quot;Le candidat A à gagner !&quot;"/>
+                    <item code="4#Le candidat A à gagner !#1" algoitem="AFFICHER &quot;Le candidat A à gagner !&quot;"/>
+                    <item code="4#Il a plus de 50% des voies !!!#0" algoitem="AFFICHER &quot;Il a plus de 50% des voies !!!&quot;"/>
                     <item code="8#finsi" algoitem="FIN_SI"/>
                 </item>
                 <item code="6#A&lt;12.5" algoitem="SI (A&lt;12.5) ALORS">
                     <item code="7#debutsi" algoitem="DEBUT_SI"/>
-                    <item code="4#Le candidat A est battu !#0" algoitem="AFFICHER &quot;Le candidat A est battu !&quot;"/>
+                    <item code="4#Le candidat A est battu !#1" algoitem="AFFICHER &quot;Le candidat A est battu !&quot;"/>
+                    <item code="4#Il a moins de 12.5% des voies#0" algoitem="AFFICHER &quot;Il a moins de 12.5% des voies&quot;"/>
                     <item code="8#finsi" algoitem="FIN_SI"/>
                 </item>
                 <item code="6#A&lt;50 ET A>12.5 ET A>B ET A>C ET A>D" algoitem="SI (A&lt;50 ET A>12.5 ET A>B ET A>C ET A>D) ALORS">
                     <item code="7#debutsi" algoitem="DEBUT_SI"/>
-                    <item code="4#Le candidat A participe au seconde tour et est en tête !#0" algoitem="AFFICHER &quot;Le candidat A participe au seconde tour et est en tête !&quot;"/>
+                    <item code="4#Le candidat A participe au seconde tour et est en tête !#1" algoitem="AFFICHER &quot;Le candidat A participe au seconde tour et est en tête !&quot;"/>
+                    <item code="4#Il a - de 50% et est premier en %#0" algoitem="AFFICHER &quot;Il a - de 50% et est premier en %&quot;"/>
                     <item code="8#finsi" algoitem="FIN_SI"/>
                 </item>
                 <item code="6#A&lt;50 ET A>12.5 ET (A&lt;B OU A&lt;C OU A&lt;D)" algoitem="SI (A&lt;50 ET A>12.5 ET (A&lt;B OU A&lt;C OU A&lt;D)) ALORS">
                     <item code="7#debutsi" algoitem="DEBUT_SI"/>
-                    <item code="4#Le candidat part au second tour mais n'est pas en tête#0" algoitem="AFFICHER &quot;Le candidat part au second tour mais n'est pas en tête&quot;"/>
+                    <item code="4#Le candidat part au second tour mais n'est pas en tête#1" algoitem="AFFICHER &quot;Le candidat part au second tour mais n'est pas en tête&quot;"/>
+                    <item code="4#Il a - de 50% et n'est pas premier en %#0" algoitem="AFFICHER &quot;Il a - de 50% et n'est pas premier en %&quot;"/>
                     <item code="8#finsi" algoitem="FIN_SI"/>
                 </item>
                 <item code="11#finsinon" algoitem="FIN_SINON"/>
