@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Algo>
-    <description texte="" courant="AFFICHER mot"/>
+    <description texte="" courant="lettreEtat1 PREND_LA_VALEUR 1"/>
     <extension extnom="inactif"/>
     <fonction fctetat="inactif" fctcode=""/>
-    <F2 F2lignes="" F2etat="inactif" F2defaut="" F2para=""/>
+    <F2 F2etat="inactif" F2defaut="" F2para="" F2lignes=""/>
     <repere repcode="-10#10#-10#10#2#2" repetat="inactif"/>
-    <param arrondiAuto="vrai" maxBoucle="600000" epaisseurPoint="2" nbDecimales="8" epaisseurLigne="2" totalAffichages="1000" totalBoucles="5000000"/>
+    <param nbDecimales="8" totalBoucles="5000000" totalAffichages="1000" epaisseurLigne="2" arrondiAuto="vrai" maxBoucle="600000" epaisseurPoint="2"/>
     <item algoitem="FONCTIONS_UTILISEES" code="200#declarationfonctions"/>
     <item algoitem="VARIABLES" code="100#declarationsvariables">
         <item algoitem="mot EST_DU_TYPE CHAINE" code="1#CHAINE#mot"/>
@@ -128,6 +128,8 @@
                 <item algoitem="AFFICHER &quot;.&quot;" code="4#.#1"/>
                 <item algoitem="AFFICHER &quot;------------------------------------&quot;" code="4#------------------------------------#1"/>
                 <item algoitem="AFFICHER &quot;.&quot;" code="4#.#1"/>
+                <item algoitem="AFFICHER &quot;Taille du mot à deviner: &quot;" code="4#Taille du mot à deviner: #0"/>
+                <item algoitem="AFFICHERCALCUL mot.length" code="20#mot.length#1"/>
                 <item algoitem="AFFICHER &quot;Mot du JOUEUR 1: &quot;" code="4#Mot du JOUEUR 1: #1"/>
                 <item algoitem="SI (lettre1 == devine OU lettreEtat1 == 1) ALORS" code="6#lettre1 == devine OU lettreEtat1 == 1">
                     <item algoitem="DEBUT_SI" code="7#debutsi"/>
