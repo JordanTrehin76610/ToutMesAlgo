@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Algo>
-    <description texte="" courant="lettreEtat1 PREND_LA_VALEUR 1"/>
+    <description courant="AFFICHER &quot; &quot;" texte=""/>
     <extension extnom="inactif"/>
     <fonction fctetat="inactif" fctcode=""/>
-    <F2 F2etat="inactif" F2defaut="" F2para="" F2lignes=""/>
-    <repere repcode="-10#10#-10#10#2#2" repetat="inactif"/>
-    <param nbDecimales="8" totalBoucles="5000000" totalAffichages="1000" epaisseurLigne="2" arrondiAuto="vrai" maxBoucle="600000" epaisseurPoint="2"/>
+    <F2 F2defaut="" F2lignes="" F2etat="inactif" F2para=""/>
+    <repere repetat="inactif" repcode="-10#10#-10#10#2#2"/>
+    <param epaisseurLigne="2" totalAffichages="1000" epaisseurPoint="2" arrondiAuto="vrai" nbDecimales="8" totalBoucles="5000000" maxBoucle="600000"/>
     <item algoitem="FONCTIONS_UTILISEES" code="200#declarationfonctions"/>
     <item algoitem="VARIABLES" code="100#declarationsvariables">
         <item algoitem="mot EST_DU_TYPE CHAINE" code="1#CHAINE#mot"/>
@@ -49,60 +49,16 @@
             <item algoitem="FIN_TANT_QUE" code="17#fintantque"/>
         </item>
         <item algoitem="i PREND_LA_VALEUR 1" code="5#i#1#pasliste"/>
-        <item algoitem="POUR i ALLANT_DE 1 A mot.length" code="12#i#1#mot.length">
-            <item algoitem="DEBUT_POUR" code="13#debutpour"/>
-            <item algoitem="SI (i == 1) ALORS" code="6#i == 1">
-                <item algoitem="DEBUT_SI" code="7#debutsi"/>
-                <item algoitem="lettre1 PREND_LA_VALEUR mot.substr(0,1)" code="5#lettre1#mot.substr(0,1)#pasliste"/>
-                <item algoitem="FIN_SI" code="8#finsi"/>
-            </item>
-            <item algoitem="SI (i == 2) ALORS" code="6#i == 2">
-                <item algoitem="DEBUT_SI" code="7#debutsi"/>
-                <item algoitem="lettre2 PREND_LA_VALEUR mot.substr(1,1)" code="5#lettre2#mot.substr(1,1)#pasliste"/>
-                <item algoitem="FIN_SI" code="8#finsi"/>
-            </item>
-            <item algoitem="SI (i == 3) ALORS" code="6#i == 3">
-                <item algoitem="DEBUT_SI" code="7#debutsi"/>
-                <item algoitem="lettre3 PREND_LA_VALEUR mot.substr(2,1)" code="5#lettre3#mot.substr(2,1)#pasliste"/>
-                <item algoitem="FIN_SI" code="8#finsi"/>
-            </item>
-            <item algoitem="SI (i == 4) ALORS" code="6#i == 4">
-                <item algoitem="DEBUT_SI" code="7#debutsi"/>
-                <item algoitem="lettre4 PREND_LA_VALEUR mot.substr(3,1)" code="5#lettre4#mot.substr(3,1)#pasliste"/>
-                <item algoitem="FIN_SI" code="8#finsi"/>
-            </item>
-            <item algoitem="SI (i == 5) ALORS" code="6#i == 5">
-                <item algoitem="DEBUT_SI" code="7#debutsi"/>
-                <item algoitem="lettre5 PREND_LA_VALEUR mot.substr(4,1)" code="5#lettre5#mot.substr(4,1)#pasliste"/>
-                <item algoitem="FIN_SI" code="8#finsi"/>
-            </item>
-            <item algoitem="SI (i == 6) ALORS" code="6#i == 6">
-                <item algoitem="DEBUT_SI" code="7#debutsi"/>
-                <item algoitem="lettre6 PREND_LA_VALEUR mot.substr(5,1)" code="5#lettre6#mot.substr(5,1)#pasliste"/>
-                <item algoitem="FIN_SI" code="8#finsi"/>
-            </item>
-            <item algoitem="SI (i == 7) ALORS" code="6#i == 7">
-                <item algoitem="DEBUT_SI" code="7#debutsi"/>
-                <item algoitem="lettre7 PREND_LA_VALEUR mot.substr(6,1)" code="5#lettre7#mot.substr(6,1)#pasliste"/>
-                <item algoitem="FIN_SI" code="8#finsi"/>
-            </item>
-            <item algoitem="SI (i == 8) ALORS" code="6#i == 8">
-                <item algoitem="DEBUT_SI" code="7#debutsi"/>
-                <item algoitem="lettre8 PREND_LA_VALEUR mot.substr(7,1)" code="5#lettre8#mot.substr(7,1)#pasliste"/>
-                <item algoitem="FIN_SI" code="8#finsi"/>
-            </item>
-            <item algoitem="SI (i == 9) ALORS" code="6#i == 9">
-                <item algoitem="DEBUT_SI" code="7#debutsi"/>
-                <item algoitem="lettre9 PREND_LA_VALEUR mot.substr(8,1)" code="5#lettre9#mot.substr(8,1)#pasliste"/>
-                <item algoitem="FIN_SI" code="8#finsi"/>
-            </item>
-            <item algoitem="SI (i == 10) ALORS" code="6#i == 10">
-                <item algoitem="DEBUT_SI" code="7#debutsi"/>
-                <item algoitem="lettre10 PREND_LA_VALEUR mot.substr(9,1)" code="5#lettre10#mot.substr(9,1)#pasliste"/>
-                <item algoitem="FIN_SI" code="8#finsi"/>
-            </item>
-            <item algoitem="FIN_POUR" code="14#finpour"/>
-        </item>
+        <item algoitem="lettre1 PREND_LA_VALEUR mot.substr(0,1)" code="5#lettre1#mot.substr(0,1)#pasliste"/>
+        <item algoitem="lettre2 PREND_LA_VALEUR mot.substr(1,1)" code="5#lettre2#mot.substr(1,1)#pasliste"/>
+        <item algoitem="lettre3 PREND_LA_VALEUR mot.substr(2,1)" code="5#lettre3#mot.substr(2,1)#pasliste"/>
+        <item algoitem="lettre4 PREND_LA_VALEUR mot.substr(3,1)" code="5#lettre4#mot.substr(3,1)#pasliste"/>
+        <item algoitem="lettre5 PREND_LA_VALEUR mot.substr(4,1)" code="5#lettre5#mot.substr(4,1)#pasliste"/>
+        <item algoitem="lettre6 PREND_LA_VALEUR mot.substr(5,1)" code="5#lettre6#mot.substr(5,1)#pasliste"/>
+        <item algoitem="lettre7 PREND_LA_VALEUR mot.substr(6,1)" code="5#lettre7#mot.substr(6,1)#pasliste"/>
+        <item algoitem="lettre8 PREND_LA_VALEUR mot.substr(7,1)" code="5#lettre8#mot.substr(7,1)#pasliste"/>
+        <item algoitem="lettre9 PREND_LA_VALEUR mot.substr(8,1)" code="5#lettre9#mot.substr(8,1)#pasliste"/>
+        <item algoitem="lettre10 PREND_LA_VALEUR mot.substr(9,1)" code="5#lettre10#mot.substr(9,1)#pasliste"/>
         <item algoitem="AFFICHER &quot;Veuillez mettre le nombre d'essai pour le JOUEUR 2&quot;" code="4#Veuillez mettre le nombre d'essai pour le JOUEUR 2#1"/>
         <item algoitem="AFFICHER &quot;(Donner un nombre d'essai supérieur au nombre de lettre de votre mot)&quot;" code="4#(Donner un nombre d'essai supérieur au nombre de lettre de votre mot)#0"/>
         <item algoitem="LIRE nbressaie" code="2#nbressaie#pasliste"/>
@@ -134,110 +90,130 @@
                 <item algoitem="SI (lettre1 == devine OU lettreEtat1 == 1) ALORS" code="6#lettre1 == devine OU lettreEtat1 == 1">
                     <item algoitem="DEBUT_SI" code="7#debutsi"/>
                     <item algoitem="AFFICHER lettre1" code="3#lettre1#0#pasliste"/>
+                    <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                     <item algoitem="lettreEtat1 PREND_LA_VALEUR 1" code="5#lettreEtat1#1#pasliste"/>
                     <item algoitem="FIN_SI" code="8#finsi"/>
                     <item algoitem="SINON" code="9#sinon">
                         <item algoitem="DEBUT_SINON" code="10#debutsinon"/>
                         <item algoitem="AFFICHER &quot;_&quot;" code="4#_#0"/>
+                        <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                         <item algoitem="FIN_SINON" code="11#finsinon"/>
                     </item>
                 </item>
                 <item algoitem="SI (lettre2 == devine OU lettreEtat2 == 1) ALORS" code="6#lettre2 == devine OU lettreEtat2 == 1">
                     <item algoitem="DEBUT_SI" code="7#debutsi"/>
                     <item algoitem="AFFICHER lettre2" code="3#lettre2#0#pasliste"/>
+                    <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                     <item algoitem="lettreEtat2 PREND_LA_VALEUR 1" code="5#lettreEtat2#1#pasliste"/>
                     <item algoitem="FIN_SI" code="8#finsi"/>
                     <item algoitem="SINON" code="9#sinon">
                         <item algoitem="DEBUT_SINON" code="10#debutsinon"/>
                         <item algoitem="AFFICHER &quot;_&quot;" code="4#_#0"/>
+                        <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                         <item algoitem="FIN_SINON" code="11#finsinon"/>
                     </item>
                 </item>
                 <item algoitem="SI (lettre3 == devine OU lettreEtat3 == 1) ALORS" code="6#lettre3 == devine OU lettreEtat3 == 1">
                     <item algoitem="DEBUT_SI" code="7#debutsi"/>
                     <item algoitem="AFFICHER lettre3" code="3#lettre3#0#pasliste"/>
+                    <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                     <item algoitem="lettreEtat3 PREND_LA_VALEUR 1" code="5#lettreEtat3#1#pasliste"/>
                     <item algoitem="FIN_SI" code="8#finsi"/>
                     <item algoitem="SINON" code="9#sinon">
                         <item algoitem="DEBUT_SINON" code="10#debutsinon"/>
                         <item algoitem="AFFICHER &quot;_&quot;" code="4#_#0"/>
+                        <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                         <item algoitem="FIN_SINON" code="11#finsinon"/>
                     </item>
                 </item>
                 <item algoitem="SI (lettre4 == devine OU lettreEtat4 == 1) ALORS" code="6#lettre4 == devine OU lettreEtat4 == 1">
                     <item algoitem="DEBUT_SI" code="7#debutsi"/>
                     <item algoitem="AFFICHER lettre4" code="3#lettre4#0#pasliste"/>
+                    <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                     <item algoitem="lettreEtat4 PREND_LA_VALEUR 1" code="5#lettreEtat4#1#pasliste"/>
                     <item algoitem="FIN_SI" code="8#finsi"/>
                     <item algoitem="SINON" code="9#sinon">
                         <item algoitem="DEBUT_SINON" code="10#debutsinon"/>
                         <item algoitem="AFFICHER &quot;_&quot;" code="4#_#0"/>
+                        <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                         <item algoitem="FIN_SINON" code="11#finsinon"/>
                     </item>
                 </item>
                 <item algoitem="SI (lettre5 == devine OU lettreEtat5 == 1) ALORS" code="6#lettre5 == devine OU lettreEtat5 == 1">
                     <item algoitem="DEBUT_SI" code="7#debutsi"/>
                     <item algoitem="AFFICHER lettre5" code="3#lettre5#0#pasliste"/>
+                    <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                     <item algoitem="lettreEtat5 PREND_LA_VALEUR 1" code="5#lettreEtat5#1#pasliste"/>
                     <item algoitem="FIN_SI" code="8#finsi"/>
                     <item algoitem="SINON" code="9#sinon">
                         <item algoitem="DEBUT_SINON" code="10#debutsinon"/>
                         <item algoitem="AFFICHER &quot;_&quot;" code="4#_#0"/>
+                        <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                         <item algoitem="FIN_SINON" code="11#finsinon"/>
                     </item>
                 </item>
                 <item algoitem="SI (lettre6 == devine OU lettreEtat6 == 1) ALORS" code="6#lettre6 == devine OU lettreEtat6 == 1">
                     <item algoitem="DEBUT_SI" code="7#debutsi"/>
                     <item algoitem="AFFICHER lettre6" code="3#lettre6#0#pasliste"/>
+                    <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                     <item algoitem="lettreEtat6 PREND_LA_VALEUR 1" code="5#lettreEtat6#1#pasliste"/>
                     <item algoitem="FIN_SI" code="8#finsi"/>
                     <item algoitem="SINON" code="9#sinon">
                         <item algoitem="DEBUT_SINON" code="10#debutsinon"/>
                         <item algoitem="AFFICHER &quot;_&quot;" code="4#_#0"/>
+                        <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                         <item algoitem="FIN_SINON" code="11#finsinon"/>
                     </item>
                 </item>
                 <item algoitem="SI (lettre7 == devine OU lettreEtat7 == 1) ALORS" code="6#lettre7 == devine OU lettreEtat7 == 1">
                     <item algoitem="DEBUT_SI" code="7#debutsi"/>
                     <item algoitem="AFFICHER lettre7" code="3#lettre7#0#pasliste"/>
+                    <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                     <item algoitem="lettreEtat7 PREND_LA_VALEUR 1" code="5#lettreEtat7#1#pasliste"/>
                     <item algoitem="FIN_SI" code="8#finsi"/>
                     <item algoitem="SINON" code="9#sinon">
                         <item algoitem="DEBUT_SINON" code="10#debutsinon"/>
                         <item algoitem="AFFICHER &quot;_&quot;" code="4#_#0"/>
+                        <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                         <item algoitem="FIN_SINON" code="11#finsinon"/>
                     </item>
                 </item>
                 <item algoitem="SI (lettre8 == devine OU lettreEtat8 == 1) ALORS" code="6#lettre8 == devine OU lettreEtat8 == 1">
                     <item algoitem="DEBUT_SI" code="7#debutsi"/>
                     <item algoitem="AFFICHER lettre8" code="3#lettre8#0#pasliste"/>
+                    <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                     <item algoitem="lettreEtat8 PREND_LA_VALEUR 1" code="5#lettreEtat8#1#pasliste"/>
                     <item algoitem="FIN_SI" code="8#finsi"/>
                     <item algoitem="SINON" code="9#sinon">
                         <item algoitem="DEBUT_SINON" code="10#debutsinon"/>
                         <item algoitem="AFFICHER &quot;_&quot;" code="4#_#0"/>
+                        <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                         <item algoitem="FIN_SINON" code="11#finsinon"/>
                     </item>
                 </item>
                 <item algoitem="SI (lettre9 == devine OU lettreEtat9 == 1) ALORS" code="6#lettre9 == devine OU lettreEtat9 == 1">
                     <item algoitem="DEBUT_SI" code="7#debutsi"/>
                     <item algoitem="AFFICHER lettre9" code="3#lettre9#0#pasliste"/>
+                    <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                     <item algoitem="lettreEtat9 PREND_LA_VALEUR 1" code="5#lettreEtat9#1#pasliste"/>
                     <item algoitem="FIN_SI" code="8#finsi"/>
                     <item algoitem="SINON" code="9#sinon">
                         <item algoitem="DEBUT_SINON" code="10#debutsinon"/>
                         <item algoitem="AFFICHER &quot;_&quot;" code="4#_#0"/>
+                        <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                         <item algoitem="FIN_SINON" code="11#finsinon"/>
                     </item>
                 </item>
                 <item algoitem="SI (lettre10 == devine OU lettreEtat10 == 1) ALORS" code="6#lettre10 == devine OU lettreEtat10 == 1">
                     <item algoitem="DEBUT_SI" code="7#debutsi"/>
                     <item algoitem="AFFICHER lettre10" code="3#lettre10#0#pasliste"/>
+                    <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                     <item algoitem="lettreEtat10 PREND_LA_VALEUR 1" code="5#lettreEtat10#1#pasliste"/>
                     <item algoitem="FIN_SI" code="8#finsi"/>
                     <item algoitem="SINON" code="9#sinon">
                         <item algoitem="DEBUT_SINON" code="10#debutsinon"/>
                         <item algoitem="AFFICHER &quot;_&quot;" code="4#_#0"/>
+                        <item algoitem="AFFICHER &quot; &quot;" code="4# #0"/>
                         <item algoitem="FIN_SINON" code="11#finsinon"/>
                     </item>
                 </item>
